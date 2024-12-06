@@ -21,6 +21,8 @@ return new class extends Migration
             $table->enum('status', [PostStatusEnum::HIDDEN->value, PostStatusEnum::PUBLISHED->value])->default(PostStatusEnum::HIDDEN->value);
             $table->tinyInteger('rating')->default(1);
             $table->timestamps();
+
+            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
         });
     }
 

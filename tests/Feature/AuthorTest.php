@@ -24,7 +24,7 @@ class AuthorTest extends TestCase
                 'content_last_published_post',
             ],
             'offset' => 0,
-            'limit' => 100,
+            'limit' => 20,
             'sort_by' => 'full_name',
             'sort_order' => 'desc',
             'filter' => [
